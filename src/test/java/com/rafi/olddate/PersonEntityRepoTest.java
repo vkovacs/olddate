@@ -47,7 +47,6 @@ public class PersonEntityRepoTest {
         var foundSanyi = personRepository.findById(persistedSanyi.getId()).orElseThrow();
 
         //then
-        assertThat(foundSanyi.getId(), is(notNullValue()));
         assertThat(foundSanyi.getName(), is("Sandor"));
         assertThat(foundSanyi.getBirthDate(), is(LocalDate.of(1750, 1, 1)));
     }
